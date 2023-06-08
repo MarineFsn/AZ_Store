@@ -10,16 +10,17 @@
 </head>
 
 <body>
-<nav class="menu">
-  <ul>
-    <span>AZ[Store]</span>
-    <li><a href="#Accueil">Home</a></li>
-    <li><a href="#Apropos">About</a></li>
-    <li><a href="#Products">Products</a></li>
-    <li><a href="#Contact">Contact</a></li>
-    <li><img src="./Assets/img/shopping-cart.svg" alt="" class="cartNav"><a href="#Login">Login</a></li>
-  </ul>
-</nav>
+<ul class="flex">
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
+</li>
+</ul>
 </body>
 
 </html>
