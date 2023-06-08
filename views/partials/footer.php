@@ -9,10 +9,14 @@
 </head>
 
 <body>
-    <?php
-
-    ?>
-
+    <nav>
+        <ul>
+            <li><a href="#Accueil">Home</a></li>
+            <li><a href="#Apropos">About</a></li>
+            <li><a href="#Products">Products</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
 </body>
 
 </html>
