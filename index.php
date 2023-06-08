@@ -1,7 +1,3 @@
-<?php
-    include 'views/partials/header.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,10 +10,23 @@
 </head>
 
 <body>
-    <?php
-        include 'views/partials/footer.php'
-    ?>
+<?php
+    include 'views/partials/header.php';
+    include 'products.php';
+?>
 
+<?php foreach ($items as $item): ?>
+    <div>
+        <h3><?php echo $item['product']; ?></h3>
+        <p>Price: $<?php echo $item['price']; ?></p>
+        <img src="<?php echo $item['image_url']; ?>" alt="<?php echo $item['product']; ?>" width="200" height="200">
+        <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+<?php endforeach; ?>
+
+<?php
+    include 'views/partials/footer.php';
+?>
 </body>
 
 </html>
