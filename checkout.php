@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <div>
         <label for="zip_code">Zip Code:</label>
-        <input type="text" id="zip_code" name="zip_code" required>
+        <input type="number" id="zip_code" name="zip_code" required>
     </div>
     <div>
         <label for="country">Country:</label>
