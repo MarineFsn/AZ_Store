@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="output.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>AZ_Store</title>
 </head>
 
@@ -60,51 +61,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <section class="container_intro">
-    <div class="container_intro_text">
-        <h1 class="container_intro_text_title">SHOE THE RIGHT ONE</h1>
-        <button class= "container_intro_text_btn">see our store</button>
+    <div class="container_intro_text content-center">
+        <h1 class="container_intro_text_title ml-16">SHOE THE<br> RIGHT <span class="blue_word">ONE</span>.</h1>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-36 h-14 mt-2 ml-16">See our store</button>
     </div>
     
-    <div class="container_title_image">
-        <img src="./Assets/img/shoe_one.png" alt="">
+    <div class="container_intro_image">
+        <img src="./Assets/img/shoe_one.png" alt="" class="container_intro_image_z0">
+        <span class="container_intro_image_z1">NIKE</span>
     </div>
 </section>
+<h3 class="container_catalog_title ml-14"><span class="blue_word">Our</span> last products</h3>
 
 <section class="container_catalog">
+
 <?php foreach ($items as $item): ?>
-    <div class="Catalog_element>
+    <div class="Catalog_element">
+    <img src="<?php echo $item['image_url']; ?>" alt="<?php echo $item['product']; ?>" width="200" height="200">
         <h3><?php echo $item['product']; ?></h3>
         <p>Price: $<?php echo $item['price']; ?></p>
-        <img src="<?php echo $item['image_url']; ?>" alt="<?php echo $item['product']; ?>" width="200" height="200">
         <form method="post" action="">
             <input type="hidden" name="product_id" value="<?php echo $item['id']; ?>">
-            <button type="submit">Add to Cart</button>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Add to Cart</button>
         </form>
     </div>
 <?php endforeach; ?>
+
 </section>
 
 <section class="container_details">
-<img class="object-center" src="./Assets/img/shoe_two.png" alt="">
-<h2>WE PROVIDE YOU THE BEST QUALITY</h2>
-<p class= "desciption_details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, sequi magni explicabo reiciendis praesentium tempore accusantium rerum laudantium, nobis voluptatum laborum consectetur.</p>
+<img class="text-center w-80 m-auto" src="./Assets/img/shoe_two.png" alt="">
+<h2 class="container_details_title">WE PROVIDE YOU <br>THE <span class="blue_word">BEST</span>QUALITY</h2>
+<p class= "desciption_details text-center mt-6 w-2/4 m-auto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, sequi magni explicabo reiciendis praesentium tempore accusantium rerum laudantium, nobis voluptatum laborum consectetur.</p>
 </section>
 
-<section class="container_testimonials">
-    <div class="container_testimonials_emily">
-        <img class="emily_img" src="./Assets/img/image-emily.jpg"alt="">
-        <span> Emily from XYZ</span>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
+<section class="container_testimonials mt-10 mb-10">
+    <div class="container_testimonials_card">
+        <img class="container_testimonials_card_img" src="./Assets/img/image-emily.jpg"alt="">
+        <span class="font-bold"> Emily from XYZ</span>
+        <p class="w-3/5 m-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
 </div>
-        <div class="container_testimonials_thomas">
-        <img class="thomas_img" src="./Assets/img/image-thomas.jpg"alt="">
-        <span> Thomas from corporate</span>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
+        <div class="container_testimonials_card">
+        <img class="container_testimonials_card_img" src="./Assets/img/image-thomas.jpg"alt="">
+        <span class="font-bold"> Thomas from corporate</span>
+        <p class="w-3/5 m-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
 </div>
-<div class="container_testimonials_jennie">
-        <img class="jennie_img" src="./Assets/img/image-jennie.jpg"alt="">
-        <span> Jennie from Nike</span>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
+<div class="container_testimonials_card">
+        <img class="container_testimonials_card_img" src="./Assets/img/image-jennie.jpg"alt="">
+        <span class="font-bold"> Jennie from Nike</span>
+        <p class="w-3/5 m-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
 </div>
         
 </section>

@@ -9,14 +9,15 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#Accueil">Home</a></li>
-            <li><a href="#Apropos">About</a></li>
-            <li><a href="#Products">Products</a></li>
-            <li><a href="#Contact">Contact</a></li>
+    <hr>
+<nav class="flex justify-between bg-gray-900 text-white w-screen mt-10">
+        <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
+          <li><a class="hover:text-gray-200" href="#">Home</a></li>
+          <li><a class="hover:text-gray-200" href="#">About</a></li>
+          <li><a class="hover:text-gray-200" href="#">Products</a></li>
+          <li><a class="hover:text-gray-200" href="#">Contact</a></li>
         </ul>
-    </nav>
+</nav>
 </body>
 
 </html>

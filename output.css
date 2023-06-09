@@ -602,6 +602,10 @@ video {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+.content-center {
+  align-content: center;
+}
+
 .items-center {
   align-items: center;
 }
@@ -697,11 +701,37 @@ video {
 
 body{
   background-color: #111827;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 li{
   list-style: none;
   text-decoration: none;
+}
+
+.container_intro{
+  display: flex;
+  flex-direction: row;
+}
+
+.container_intro_text, .container_intro_image{
+  display: flex;
+  flex-basis: 50%;
+}
+
+.container_intro_text{
+  flex-direction: column;
+  margin: auto;
+}
+
+.container_intro_text_title {
+  font-weight: 600;
+  font-size: 75px;
+}
+
+.container_intro_image{
+  width: 400px;
 }
 
 .container_testimonials{
@@ -731,6 +761,10 @@ h2 {
 
 .catalog_elements{
   display: flex;
+}
+
+.blue_word{
+  color: blue;
 }
 
 .hover\:text-gray-200:hover {

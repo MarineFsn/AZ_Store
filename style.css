@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 .cartNav {
     width: 25px;
@@ -12,11 +13,39 @@
 
 body{
     background-color: #111827;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 li{
     list-style: none;
     text-decoration: none;
+}
+
+.container_intro{
+    display: flex;
+    flex-direction: row;
+}
+
+.container_intro_text, .container_intro_image{
+    display: flex;
+    flex-basis: 50%;
+}
+
+.container_intro_text{
+    flex-direction: column;
+    margin: auto;
+}
+
+.container_intro_text_title {
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 75px;
+}
+
+.container_intro_image{
+    position: relative;
+    width: 400px;
 }
 
 .container_testimonials{
@@ -25,15 +54,23 @@ li{
     justify-content: center;
 }
 
-.container_testimonials_emily, .container_testimonials_thomas, .container_testimonials_jennie{
+.container_testimonials_card{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    margin: 10px;
 }
 
+.container_testimonials_card_img{
+    width: 100px;
+    border-radius: 50px;
+    margin: auto;
+}
 .container_details{
     display: flex;
     flex-direction: column;
- }
+}
  
  h2 {
      text-align: center;
@@ -44,10 +81,47 @@ li{
     text-align: center;
  }
 
-
-
  .catalog_elements{
     display: flex;
  }
+
+ .blue_word{
+    color: #2563eb;
+ }
  
- 
+.container_intro_image_z0{
+    margin-top: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 600px;
+    z-index: 1;
+    height: 100%;
+}
+
+.container_intro_image_z1{
+    font-size: 300px;
+        position: relative;
+        z-index: 0;
+        margin-top: 70px;
+        color: #111827;
+        text-shadow: 2px 2px 4px #ffffff17, -2px -2px 4px #ffffff17;
+}
+
+.container_catalog{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container_catalog_title{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container_details_title {
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 70px;
+}
