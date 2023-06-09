@@ -9,3 +9,12 @@
     margin-top: 5px;
     margin-left: 85px;
 }
+
+body{
+    background-color: #111827;
+}
+
+li{
+    list-style: none;
+    text-decoration: none;
+}
