@@ -10,6 +10,7 @@
 </head>
 
 <body>
+ 
 <?php
     include 'products.php';
 ?>
@@ -58,8 +59,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+<section class="container_intro">
+    <div class="container_intro_text">
+        <h1 class="container_intro_text_title">SHOE THE RIGHT ONE</h1>
+        <button class= "container_intro_text_btn">see our store</button>
+    </div>
+    
+    <div class="container_title_image">
+        <img src="./Assets/img/shoe_one.png" alt="">
+    </div>
+</section>
+
+<section class="container_catalog">
 <?php foreach ($items as $item): ?>
-    <div>
+    <div class="Catalog_element>
         <h3><?php echo $item['product']; ?></h3>
         <p>Price: $<?php echo $item['price']; ?></p>
         <img src="<?php echo $item['image_url']; ?>" alt="<?php echo $item['product']; ?>" width="200" height="200">
@@ -69,6 +82,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 <?php endforeach; ?>
+</section>
+
+<section class="container_details">
+<img class="object-center" src="./Assets/img/shoe_two.png" alt="">
+<h2>WE PROVIDE YOU THE BEST QUALITY</h2>
+<p class= "desciption_details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, sequi magni explicabo reiciendis praesentium tempore accusantium rerum laudantium, nobis voluptatum laborum consectetur.</p>
+</section>
+
+<section class="container_testimonials">
+    <div class="container_testimonials_emily">
+        <img class="emily_img" src="./Assets/img/image-emily.jpg"alt="">
+        <span> Emily from XYZ</span>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
+</div>
+        <div class="container_testimonials_thomas">
+        <img class="thomas_img" src="./Assets/img/image-thomas.jpg"alt="">
+        <span> Thomas from corporate</span>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
+</div>
+<div class="container_testimonials_jennie">
+        <img class="jennie_img" src="./Assets/img/image-jennie.jpg"alt="">
+        <span> Jennie from Nike</span>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nemo repudiandae explicabo hic nesciunt?</p>
+</div>
+        
+</section>
+
 
 <?php
     include 'views/partials/footer.php';

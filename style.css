@@ -18,3 +18,36 @@ li{
     list-style: none;
     text-decoration: none;
 }
+
+.container_testimonials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container_testimonials_emily, .container_testimonials_thomas, .container_testimonials_jennie{
+    display: flex;
+    flex-direction: row;
+}
+
+.container_details{
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ h2 {
+     text-align: center;
+     flex-basis: 50%;
+ }
+
+ .desription_details {
+    text-align: center;
+ }
+
+
+
+ .catalog_elements{
+    display: flex;
+ }
+ 
+ 
